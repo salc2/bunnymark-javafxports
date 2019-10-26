@@ -23,7 +23,6 @@ import java.util.concurrent.atomic.AtomicBoolean;
 public class Main extends Application {
 
     public final static double GRAVITY = 0.75;
-   // private final Image img = new Image("file:"+getClass().getClassLoader().getResource("img/lineup.png").getPath());
     private final Image img = new Image(Main.class.getResourceAsStream("/img/lineup.png"));
     private final AtomicBoolean isAdding = new AtomicBoolean(false);
     private int count = 12;
@@ -38,7 +37,6 @@ public class Main extends Application {
         Scene s = new Scene(root, primaryScreenBounds.getWidth(), primaryScreenBounds.getHeight(), Color.BLACK);
 
         Frame[] frames = new Frame[12];
-        // Init frames coord
         for(int i=0;i<12;i++){
             frames[i] = new Frame(i*36,0,36,36);
         }
